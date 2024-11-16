@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirror Text Generator</title>
+    <title>Flip & Mirror Text Generator</title>
     <style>
         /* Base Styling */
         * {
@@ -81,18 +81,35 @@
     </style>
 </head>
 <body>
-    <h1>Mirror Text Generator</h1>
+    <h1>Flip & Mirror Text Generator</h1>
     <textarea id="inputText" placeholder="Type or paste your text here..."></textarea><br>
-    <input type="button" value="Mirror Text" onclick="generateMirrorText()">
+    <input type="button" value="Flip & Mirror Text" onclick="generateFlippedText()">
     <div id="output" hidden></div>
     <footer>Crafted with ❤️ for your text manipulation needs.</footer>
 
     <script>
-        function generateMirrorText() {
+        function generateFlippedText() {
+            const flipMap = {
+                'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ƃ', 'h': 'ɥ',
+                'i': 'ı', 'j': 'ɾ', 'k': 'ʞ', 'l': 'ן', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
+                'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x',
+                'y': 'ʎ', 'z': 'z', 'A': '∀', 'B': '𐑺', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ', 'F': 'Ⅎ',
+                'G': '⅁', 'H': 'H', 'I': 'I', 'J': 'ſ', 'K': '⋊', 'L': '⅂', 'M': 'W', 'N': 'N',
+                'O': 'O', 'P': 'Ԁ', 'Q': 'Ὁ', 'R': 'ᴚ', 'S': 'S', 'T': 'ꓕ', 'U': '∩', 'V': 'ᴧ',
+                'W': 'M', 'X': 'X', 'Y': '⅄', 'Z': 'Z', '0': '0', '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ',
+                '4': '߈', '5': 'ϛ', '6': '9', '7': 'ㄥ', '8': '8', '9': '6', '.': '˙', ',': "'",
+                "'": ',', '"': '„', '_': '‾', '?': '¿', '!': '¡', '&': '⅋', '(': ')', ')': '(',
+                '[': ']', ']': '[', '{': '}', '}': '{', '<': '>', '>': '<', ' ': ' ', '\n': '\n'
+            };
+
             const input = document.getElementById("inputText").value;
-            const mirrored = input.split("").reverse().join("");
+            const flipped = input
+                .split('')
+                .reverse()
+                .map(char => flipMap[char] || char)
+                .join('');
             const outputDiv = document.getElementById("output");
-            outputDiv.textContent = mirrored;
+            outputDiv.textContent = flipped;
             outputDiv.hidden = false;
         }
     </script>
