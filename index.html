@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirror Text Generator</title>
+    <title>Reverse Text</title>
     <style>
         * {
             margin: 0;
@@ -78,31 +78,18 @@
     </style>
 </head>
 <body>
-    <h1>Mirror Text Generator</h1>
+    <h1>Reverse Text Generator</h1>
     <textarea id="inputText" placeholder="Type or paste your text here..."></textarea><br>
-    <input type="button" value="Mirror Text Horizontally" onclick="generateMirroredText()">
+    <input type="button" value="Reverse Text" onclick="generateReversedText()">
     <div id="output" hidden></div>
     <footer>Crafted with ❤️ for your text manipulation needs.</footer>
 
     <script>
-        function generateMirroredText() {
-            const mirrorMap = {
-                'a': 'ɒ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ᵷ', 'h': 'ɥ',
-                'i': 'ı', 'j': 'ɾ', 'k': 'ʞ', 'l': 'ן', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
-                'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x',
-                'y': 'ʎ', 'z': 'z', 'A': '∀', 'B': '𐑉', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ', 'F': 'Ⅎ',
-                'G': '⅁', 'H': 'H', 'I': 'I', 'J': 'ſ', 'K': '⋊', 'L': '⅂', 'M': 'W', 'N': 'И',
-                'O': 'O', 'P': 'Ԁ', 'Q': 'Ό', 'R': 'ᴚ', 'S': 'S', 'T': '┴', 'U': '∩', 'V': 'ᴧ',
-                'W': 'M', 'X': 'X', 'Y': '⅄', 'Z': 'Ƹ', ' ': ' ', '\n': '\n'
-            };
-
+        function generateReversedText() {
             const input = document.getElementById("inputText").value;
-            const mirrored = input
-                .split('')
-                .map(char => mirrorMap[char] || char)
-                .join('');
+            const reversed = input.split('').reverse().join('');
             const outputDiv = document.getElementById("output");
-            outputDiv.textContent = mirrored;
+            outputDiv.textContent = reversed;
             outputDiv.hidden = false;
         }
     </script>
