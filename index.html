@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mirror Text Generator</title>
     <style>
-        /* Base Styling */
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +29,6 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        /* Input & Output Styling */
         textarea, input {
             width: 90%;
             max-width: 600px;
@@ -72,7 +70,6 @@
             text-align: left;
         }
 
-        /* Footer */
         footer {
             margin-top: 30px;
             font-size: 0.9rem;
@@ -90,12 +87,12 @@
     <script>
         function generateMirroredText() {
             const mirrorMap = {
-                'a': 'ɒ', 'b': 'd', 'c': 'ɔ', 'd': 'b', 'e': 'ɘ', 'f': 'ʇ', 'g': 'ᄃ', 'h': 'ɥ',
-                'i': 'i', 'j': 'ſ', 'k': 'ʞ', 'l': 'l', 'm': 'm', 'n': 'n', 'o': 'o', 'p': 'q',
-                'q': 'p', 'r': 'ɿ', 's': 'ƨ', 't': 'ʇ', 'u': 'u', 'v': 'v', 'w': 'ʍ', 'x': 'x',
-                'y': 'ʎ', 'z': 'z', 'A': 'Ɐ', 'B': 'Ԑ', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ', 'F': 'Ⅎ',
-                'G': '⅁', 'H': 'H', 'I': 'I', 'J': 'ᒐ', 'K': '⋊', 'L': '⅃', 'M': 'W', 'N': 'И',
-                'O': 'O', 'P': 'Ԁ', 'Q': 'Ό', 'R': 'ᴚ', 'S': 'Ƨ', 'T': '┴', 'U': '∩', 'V': 'ᴧ',
+                'a': 'ɒ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ᵷ', 'h': 'ɥ',
+                'i': 'ı', 'j': 'ɾ', 'k': 'ʞ', 'l': 'ן', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
+                'q': 'b', 'r': 'ɹ', 's': 's', 't': 'ʇ', 'u': 'n', 'v': 'ʌ', 'w': 'ʍ', 'x': 'x',
+                'y': 'ʎ', 'z': 'z', 'A': '∀', 'B': '𐑉', 'C': 'Ɔ', 'D': 'ᗡ', 'E': 'Ǝ', 'F': 'Ⅎ',
+                'G': '⅁', 'H': 'H', 'I': 'I', 'J': 'ſ', 'K': '⋊', 'L': '⅂', 'M': 'W', 'N': 'И',
+                'O': 'O', 'P': 'Ԁ', 'Q': 'Ό', 'R': 'ᴚ', 'S': 'S', 'T': '┴', 'U': '∩', 'V': 'ᴧ',
                 'W': 'M', 'X': 'X', 'Y': '⅄', 'Z': 'Ƹ', ' ': ' ', '\n': '\n'
             };
 
